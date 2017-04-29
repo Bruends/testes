@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>	
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+    <script type="text/javascript">
+        
+    //COLOQUE SUA KEY DE API DO GOOGLE AQUI
+    key = "";
+    //--------------------------------------
+
+    </script>
+</head>
+
+<body id="container">
+	<form action="#" id="formGeo">
+		Procurar local: <input type="text" id="txtAddress">
+		<input type="button" value="Buscar" id="btnSearch">
+		
+		<p>As chances de encontrar o endereço aumentam se: <br>
+		*procurar por CEP <br>
+		*ou por endereço no formato (rua, cidade, pais)</p>
+	</form>
+	<div id="map"></div>
+</body>
+
+<!-- jquery -->
+<script src="jquery.min.js"></script>
+<!-- js funções do mapa -->
+<script src="function.js"></script>
+
+</html>

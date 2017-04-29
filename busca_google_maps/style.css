@@ -1,0 +1,25 @@
+html, body { height: 100%; }
+
+#container{
+    display: -ms-flex;
+    display: flex;
+
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#formGeo{
+    height: 30%;
+    width: 350px;
+    margin-top: 50px;
+}
+#map { 
+    height: 500px;
+    width: 650px;
+}
+
+p{
+    font-family: arial; 
+    color: #4c4c4c; 
+    font-size: 11pt;
+}

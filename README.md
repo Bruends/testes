@@ -1,2 +1,3 @@
 # estudos-menores
-repositório de estudos
+
+Repositório de estudos rápidos, primeiro contato com linguagens, frameworks, APIs e etc..
