@@ -1,0 +1,23 @@
+*{
+    font-family: arial;
+    font-size: 12pt;
+}
+.hint{
+    font-size: 10pt;
+    color: #444;
+}
+
+form{
+    width: 400px;
+    color: #333;
+    padding: 35px;
+    
+}
+
+input{
+    
+    width: 255px;
+    padding: 5px;
+    margin: 10px;
+    color: #333;
+}
