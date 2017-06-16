@@ -1,0 +1,23 @@
+/* animacao fade-in*/
+
+.anime{
+    opacity: 0;
+}
+
+.anime-left{
+    transform: translate3d(-50px, 0 , 0);
+}
+
+.anime-rigth{
+    transform: translate3d(50px, 0 , 0);
+}
+
+.anime-top{
+    transform: translate3d(0, -50px , 0);
+}
+
+.anime-init{    
+    opacity: 1;
+    transform: translate3d(0,0,0);
+    transition: 0.8s;
+}
