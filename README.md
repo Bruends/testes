@@ -1,2 +1,2 @@
 # estudos
-Repositório de estudos.
+Repositório de estudos rápidos e mais simples.
