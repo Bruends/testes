@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html ng-app="store">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>    
+    <!--  bootstrap  -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">    
+    <style>
+        img{
+            width: 150px;
+            height: 150px;
+        }
+        
+       .products{
+           box-shadow: 2px 2px 10px #161616;
+           border-radius: 5%;
+           padding: 10px;
+           margin-bottom: 10px;
+        }
+        
+        .panel{
+            border: 1px solid #e6e6e6;
+        }
+        
+    </style>
+</head>
+<!--   body chama o controller     -->
+<body ng-controller="StoreController as store">
+<!-- expression simples -->
+  <p>{{"hello" + "world"}}</p>
+    
+    
+    <!--  funções do controller só funcionam dentro da tag que foi declarado  -->
+    <!--  usando div para chamar directive de loop  -->
+   <div ng-repeat="product in store.products" class="col-lg-4 col-lg-offset-4 products">        
+    <h1>{{product.name}}</h1>
+    
+    <!-- img com directive  -->
+    <img ng-src="{{product.img}}"> 
+    
+    <!--  tabs bootstrap  -->
+    <section ng-controller="PanelController as panel">
+        <ul class="nav nav-pills">
+            <li ng-class="{active:panel.isSelected(1)}">
+                <a href="" ng-click="panel.setTab(1)">Descrição</a>
+            </li>
+            <li ng-class="{active:panel.isSelected(2)}">
+                <a href="" ng-click="panel.setTab(2)">Especificações</a>
+            </li>
+            <li ng-class="{active:panel.isSelected(3)}">
+                <a href="" ng-click="panel.setTab(3)">Comentários</a>
+            </li>
+        </ul>
+    
+    
+        <!--  conteudo das tabs  -->
+        <div class="panel" ng-show="panel.isSelected(1)">
+            <h4>Descrição</h4>
+            <p>{{product.description}}</p>
+        </div>
+        <div class="panel" ng-show="panel.isSelected(2)">
+            <h4>Especificações</h4>
+            <p>{{product.description}}</p>
+        </div>
+        <div class="panel" ng-show="panel.isSelected(3)">
+            <h4>Comentários</h4>
+            <p>{{product.description}}</p>
+        </div>
+    </section>
+    
+    
+    <!--  adicionando filter  -->
+    <h2>{{product.price | currency}}</h2>       
+       
+    
+    <!--  usando directive para mostrar ou não o botão  -->
+    <!--  caso a variavel "canBuy" não exista, o angular interpreta como falso  -->
+    <button ng-show="product.canBuy">Add to chart</button>
+    </div> 
+       
+    
+   <!--  angular e js externo  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="app.js"></script>
+    
+</body>
+</html>

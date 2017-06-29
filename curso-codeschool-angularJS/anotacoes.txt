@@ -1,0 +1,10 @@
+-------- Básico ----------
+Directives - notações html que acionam ações javascript
+
+Modules - onde o código de comportamento da aplicação é escrito
+
+Controllers - onde definimos as ações 
+
+Expressions - mostrando valores no HTML
+
+-------------------
