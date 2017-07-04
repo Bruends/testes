@@ -1,0 +1,14 @@
+{
+	"version": 3,
+	"file": "../scss/style.css",
+	"sources": [
+		"../scss/style.scss",
+		"../scss/_colors.scss"
+	],
+	"sourcesContent": [
+		"//importando\r\n@import \"colors\";\r\n\r\n$font: 'monospace';\r\n\r\n//variaveis de cores declaradas no arquivo _cores.scss\r\ndiv{\r\n    background-color: $dark-gray;\r\n    p{\r\n        color: $red;        \r\n    }\r\n}\r\n\r\n//aninhando varias tags\r\nul{\r\n    font: $font;\r\n    li{\r\n        list-style: none;\r\n        color: $red;\r\n        \r\n        a{\r\n            color: $blue;\r\n            text-decoration: none;\r\n        }\r\n    }\r\n    \r\n}\r\n\r\n",
+		"//variaveis de cor\r\n$dark-gray: #222;\r\n$red: #f00;\r\n$blue: #00f;"
+	],
+	"mappings": ";AAMA,AAAA,GAAG,CAAA;EACC,gBAAgB,ECNR,IAAI;CDUf;;;AALD,AAEI,GAFD,CAEC,CAAC,CAAA;EACG,KAAK,ECPP,IAAI;CDQL;;;AAIL,AAAA,EAAE,CAAA;EACE,IAAI,EAZD,WAAW;CAuBjB;;;AAZD,AAEI,EAFF,CAEE,EAAE,CAAA;EACE,UAAU,EAAE,IAAK;EACjB,KAAK,EChBP,IAAI;CDsBL;;;AAVL,AAMQ,EANN,CAEE,EAAE,CAIE,CAAC,CAAA;EACG,KAAK,EClBV,IAAI;EDmBC,eAAe,EAAE,IAAK;CACzB",
+	"names": []
+}

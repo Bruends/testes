@@ -1,0 +1,88 @@
+//importando estilos externos
+@import "colors";
+@import "mixins";
+
+//variavel fonte
+$font: 'monospace';
+
+
+//----------usando variaveis
+div{
+    background-color: $dark-gray;
+    p{
+        color: $red;        
+    }
+}
+
+
+//----------aninhando varias tags
+ul{    
+    li{
+        list-style: none;
+        
+        //usando mixin
+        @include font-config;
+        
+        a{
+            color: $blue;
+            text-decoration: none;
+            
+            //usando & para "juntar" dois elementos
+            //no caso o "a" com o ":hover" 
+            &:hover{
+                color: $red;
+            }
+        }
+    }    
+}
+
+//-----------usando varios mixins
+
+.box-1{
+    //usando mixin com parametro
+    @include box(#4A5);
+    
+    //mixin com @content responsivo
+    @include mobile{
+        @include box(#e6e6e6);
+    }
+}
+
+.box-2{
+    //usando mixin com valor padrão
+    @include box();
+    
+    //passando duas sombras como parametro, separando com virgula
+    //como o mixin aceita varios parametros, poderia adicionar quantas sombras fossem necessárias
+    @include box-shadow(-10px -10px 0 0 #000, 10px 10px 0 0 $orange);
+}
+
+//-------------condicionais (if/else)
+
+//variavel que controla o tema
+$theme: 'dark';
+
+//valores padrão
+$color: orange;
+$shadow-1: blue;
+$shadow-2: red;
+
+//tema light
+@if $theme == 'light' {
+    $color: #e6e6e6;
+    $shadow-1: #ffff84;
+    $shadow-2: #eaea00;
+    
+    //tema dark
+} @else if $theme == 'dark'{
+    $color: #333;
+    $shadow-1: #010152;
+    $shadow-2: #2b2baf;
+}
+
+.box-3{
+    @include box($color);    
+    @include box-shadow(-10px -10px 0 0 $shadow-1, 10px 10px 0 0 $shadow-2);
+}
+
+//--------------------

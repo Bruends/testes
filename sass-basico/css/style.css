@@ -1,0 +1,67 @@
+div {
+  background-color: #222;
+}
+
+div p {
+  color: #f00;
+}
+
+ul li {
+  list-style: none;
+  font-family: "monospace";
+  color: orange;
+  font-size: 1.5em;
+}
+
+ul li a {
+  color: #00f;
+  text-decoration: none;
+}
+
+ul li a:hover {
+  color: #f00;
+}
+
+.box-1 {
+  content: " ";
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  margin: 5px;
+  background-color: #4A5;
+}
+
+@media screen and (max-width: 760px) {
+  .box-1 {
+    content: " ";
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    margin: 5px;
+    background-color: #e6e6e6;
+  }
+}
+
+.box-2 {
+  content: " ";
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  margin: 5px;
+  background-color: #a55;
+  box-shadow: -10px -10px 0 0 #000, 10px 10px 0 0 orange;
+  -moz-box-shadow: -10px -10px 0 0 #000, 10px 10px 0 0 orange;
+  -webkit-box-shadow: -10px -10px 0 0 #000, 10px 10px 0 0 orange;
+}
+
+.box-3 {
+  content: " ";
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  margin: 5px;
+  background-color: #333;
+  box-shadow: -10px -10px 0 0 #010152, 10px 10px 0 0 #2b2baf;
+  -moz-box-shadow: -10px -10px 0 0 #010152, 10px 10px 0 0 #2b2baf;
+  -webkit-box-shadow: -10px -10px 0 0 #010152, 10px 10px 0 0 #2b2baf;
+}

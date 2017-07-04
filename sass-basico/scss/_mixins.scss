@@ -1,0 +1,37 @@
+//mixins
+//blocos de css que podem ser reaproveitados
+//declarar como @mixin nome_mixin
+//usando @include nome_mixin
+
+@mixin font-config{
+    font-family: $font;
+    color: $orange;
+    font-size: 1.5em;
+}
+
+//mixin com parametro e valor padrão
+@mixin box($color: #a55){
+    content: " ";
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    margin: 5px;
+    background-color: $color;    
+}
+
+//mixin com parametro com valores
+//o "..." indica que o mixin vai receber mais de um valor como parametro
+@mixin box-shadow($shadow...){
+    box-shadow: $shadow;
+    -moz-box-shadow: $shadow;
+    -webkit-box-shadow: $shadow;    
+}
+
+
+//mixin com content
+//@content deixa o conteudo do mixin em aberto, para que seja colocado quado o mesmo for chamado
+@mixin mobile{
+    @media screen and (max-width: 760px){
+        @content;
+    }
+}
