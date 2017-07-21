@@ -1,0 +1,13 @@
+body{
+    background-color: #f6f6f6;
+}
+.main-container{
+    margin-top: 15px;
+    background-color: #fff;
+    padding: 50px;    
+    box-shadow: 5px 15px 11px #999;
+}
+
+form, table{
+    margin-top: 15px;
+}
