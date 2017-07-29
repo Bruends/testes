@@ -54,9 +54,9 @@ class Crud extends ConnectDB
         $query .= "SET titulo = :title, autor = :author ";
         $query .= "WHERE cod = :cod";
 
-        $delete = $this->pdo->prepare($query);
+        $update = $this->pdo->prepare($query);
 
-        $delete->execute(array(
+        $update->execute(array(
             ':cod'    => $cod,
             ':title'  => $title,
             ':author' => $author
