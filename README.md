@@ -1,2 +1,2 @@
 # estudos
-Repositório de estudos rápidos e mais simples.
+Repositório de estudos e testes com linguagens/frameworks/CMSs etc.
