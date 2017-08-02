@@ -2,7 +2,7 @@
 
 <!-- criando template para a pag sobre  -->
 
-<!-- utilizando o plugin custom post fields (versão free)  -->
+<!-- utilizando o plugin Advanced Custom Fields (versão free)  -->
 <?php get_header(); ?>
   <p>sobre</p>
   <p>Telefone: <?php the_field('telefone'); ?></p>
