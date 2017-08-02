@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-  <p>HI :D</p>
+  
   <div class='center'>
     <!-- loop que mostra todos os posts disponiveis  -->
     <?php if( have_posts() ) : while( have_posts() ) : the_post(); ?>
