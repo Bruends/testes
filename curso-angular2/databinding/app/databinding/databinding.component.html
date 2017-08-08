@@ -1,0 +1,16 @@
+<section>
+  <article>
+    <h3>interpolation</h3>
+    <p>{{ url }}</p>
+    <p>1 + 1 = {{ 1 + 1 }}</p>
+    <p>1 + 1 != {{ 1 + 1 + getValor() }}</p>
+    <p>{{ cursoAngular && getCurtirCurso() }}</p>
+  </article>
+
+  <article>
+    <h3>interpolation</h3>
+    <img src="{{ imgUrl }}">
+    <h3>Property binding</h3>
+    <img [src]='imgUrl'>
+  </article>
+</section>
