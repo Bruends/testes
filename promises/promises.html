@@ -1,0 +1,39 @@
+<meta charset="utf-8">
+<script>
+'use strict'
+
+let promise = new Promise( (resolve, reject) => {
+  let request = new XMLHttpRequest();
+  let ok = 200;
+
+  request.open('GET', 'https://randomuser.me/api/');
+  request.send(null);
+
+  request.onreadystatechange = () => {
+    if(request.readyState === 4){
+      if(request.status === ok){
+        resolve(request.response);
+    
+      } else {
+          reject('Erro: ' + request.status);
+      }
+    }
+  };
+ 
+
+});
+
+promise
+  .then ((res) => {
+    console.log(res);
+    document.writeln('Requisição concluida com sucesso!');
+    document.writeln('Dados no Console !');
+  })
+
+  .catch ((err) => {
+    console.log(err);
+
+  });
+
+
+</script>
