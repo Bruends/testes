@@ -25,9 +25,8 @@ let promise = new Promise( (resolve, reject) => {
 
 promise
   .then ((res) => {
-    console.log(res);
-    document.writeln('Requisição concluida com sucesso!');
-    document.writeln('Dados no Console !');
+    alert('Sucesso!');
+    console.log(res);    
   })
 
   .catch ((err) => {
@@ -37,3 +36,6 @@ promise
 
 
 </script>
+<body>
+  <p>dados da api no console!</p>
+</body>
