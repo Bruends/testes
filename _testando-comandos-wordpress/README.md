@@ -1,1 +1,0 @@
-testando alguns comandos basicos para a criação de templates customizados.
